@@ -19,6 +19,7 @@ RUN pacman -Syyuu --noconfirm && \
     git \
     fakeroot \
     sudo \
+    pulseaudio \
     gcc \
     startup-notification
 
@@ -44,5 +45,7 @@ RUN pacman -U --noconfirm /home/anon/tor-browser/tor-browser-7.5.6-1-x86_64.pkg.
 
 USER anon
 RUN mkdir /home/anon/Downloads
+RUN pulseaudio --fail --daemonize --start && \
+    pactl load-module module-null-sink
 CMD tor-browser
 
