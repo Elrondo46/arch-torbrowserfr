@@ -7,7 +7,7 @@ RUN pacman -Syyuu --noconfirm && \
     dbus-glib \
     desktop-file-utils \
     file \
-    gtk2 \
+    gawk \
     gtk3 \
     hicolor-icon-theme \
     hunspell \
