@@ -40,7 +40,7 @@ RUN git clone https://aur.archlinux.org/tor-browser.git && \
     TORBROWSER_PKGLANG='fr' makepkg --skippgpcheck -s 
 USER root
 
-RUN pacman -U --noconfirm /home/anon/tor-browser/tor-browser-8.5.3-1-x86_64.pkg.tar.xz && \
+RUN pacman -U --noconfirm /home/anon/tor-browser/tor-browser-8.5.4-1-x86_64.pkg.tar.xz && \
     pacman -R --noconfirm gcc fakeroot sudo git && \
     pacman -Scc --noconfirm && \
     rm -rf /home/anon/* 
