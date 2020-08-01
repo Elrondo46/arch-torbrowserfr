@@ -38,11 +38,11 @@ USER anon
 RUN git clone https://aur.archlinux.org/tor-browser.git && \
     cd /home/anon/tor-browser && \
     #gpg --receive-keys D1483FA6C3C07136 && \
-    sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
+    #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
     TORBROWSER_PKGLANG='fr' makepkg --skippgpcheck -s 
 USER root
 
-RUN pacman -U --noconfirm /home/anon/tor-browser/tor-browser-9.5.1-1-x86_64.pkg.tar.zst && \
+RUN pacman -U --noconfirm /home/anon/tor-browser/tor-browser-9.5.3-1-x86_64.pkg.tar.zst && \
     pacman -R --noconfirm gcc fakeroot sudo git && \
     pacman -Scc --noconfirm && \
     rm -rf /home/anon/* 
