@@ -2,6 +2,7 @@ FROM archlinux/base
 
 RUN pacman -Syy && \
     pacman -S --noconfirm \
+    base-devel \
     wget \
     alsa-lib \
     dbus-glib \
