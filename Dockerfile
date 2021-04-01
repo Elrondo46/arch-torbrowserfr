@@ -11,6 +11,7 @@ RUN pacman -Syy && \
     file \
     gtk2 \
     gtk3 \
+    glibc \
     hicolor-icon-theme \
     hunspell \
     icu \
