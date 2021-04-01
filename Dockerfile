@@ -1,6 +1,6 @@
 FROM archlinux/base
 
-RUN pacman -Syyuu --noconfirm && \
+RUN pacman -Syy && \
     pacman -S --noconfirm \
     wget \
     alsa-lib \
