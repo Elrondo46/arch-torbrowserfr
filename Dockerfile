@@ -1,7 +1,8 @@
 FROM archlinux/base
 
-RUN sed -i 's/^CheckSpace/#CheckSpace/g' /etc/pacman.conf && \
-    pacman -Syyuu && \
+RUN sed -i 's/^CheckSpace/#CheckSpace/g' /etc/pacman.conf
+
+RUN pacman -Syyuu --noconfirm && \
     pacman -S --noconfirm \
     base-devel \
     wget \
