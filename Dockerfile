@@ -13,7 +13,6 @@ RUN pacman -Syyuu --noconfirm && \
     gawk \
     desktop-file-utils \
     file \
-    gtk2 \
     gtk3 \
     glibc \
     hicolor-icon-theme \
