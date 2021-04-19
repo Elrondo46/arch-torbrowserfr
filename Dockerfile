@@ -22,7 +22,6 @@ RUN pacman -Syyuu --noconfirm && \
     libvpx \
     libxt \
     mime-types \
-    mozilla-common \
     nss \
     git \
     fakeroot \
