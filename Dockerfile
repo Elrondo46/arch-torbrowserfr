@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM archlinux:base
 
 RUN sed -i 's/^CheckSpace/#CheckSpace/g' /etc/pacman.conf
 
