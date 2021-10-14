@@ -2,7 +2,7 @@
 
 # ARCH TOR-BROWSER
 
-To authorize exporting X use this
+To authorize exporting X use this:
 
 xhost local:root
 
