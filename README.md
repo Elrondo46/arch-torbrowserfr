@@ -1,4 +1,3 @@
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ab5c8ba710a4a48ab70ae9c0e8bd026)](https://app.codacy.com/gh/Elrondo46/arch-torbrowserfr?utm_source=github.com&utm_medium=referral&utm_content=Elrondo46/arch-torbrowserfr&utm_campaign=Badge_Grade_Settings)
 
 # ARCH TOR-BROWSER
