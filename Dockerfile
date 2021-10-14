@@ -39,7 +39,7 @@ RUN mkdir /home/anon/Downloads && \
     chown -R anon:anon /home/anon/
 USER anon
 
-RUN git clone https://aur.archlinux.org/tor-browser.git && \
+RUN git clone https://aur.archlinux.org/tor-browser.git /home/anon && \
     cd /home/anon/tor-browser && \
     #gpg --receive-keys D1483FA6C3C07136 && \
     #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
