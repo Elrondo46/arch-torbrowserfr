@@ -42,7 +42,8 @@ USER anon
 RUN git clone https://aur.archlinux.org/tor-browser.git /home/anon/tor-browser
     #gpg --receive-keys D1483FA6C3C07136 && \
     #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
-WORKDIR /home/anon/tor-browser    
+WORKDIR /home/anon/tor-browser
+RUN sed -i -e "s/11.5.2/11.5.4/g" PKGBUILD
 RUN TORBROWSER_PKGLANG='fr' makepkg --skippgpcheck -s 
 USER root
 
