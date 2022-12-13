@@ -1,8 +1,6 @@
 FROM archlinux:base
 
 RUN sed -i 's/^CheckSpace/#CheckSpace/g' /etc/pacman.conf
-RUN sed -i 's/^#fr_FR.UTF-8/fr_FR.UTF-8/g' /etc/locale.gen
-RUN locale-gen
 
 RUN pacman -Syyuu --noconfirm && \
     pacman -S --noconfirm \
