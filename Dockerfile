@@ -56,5 +56,5 @@ USER anon
 RUN mkdir /home/anon/Downloads
 RUN pulseaudio --fail --daemonize --start && \
     pactl load-module module-null-sink
-CMD tor-browser
+CMD LANGUAGE=fr_FR && tor-browser
 
