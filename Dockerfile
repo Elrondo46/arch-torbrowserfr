@@ -30,6 +30,8 @@ RUN pacman -Syyuu --noconfirm && \
     gcc \
     startup-notification
 
+RUN sed -i "s/#fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/g" /etc/locale.gen
+RUN locale-gen
 RUN useradd -m -d /home/anon anon
 
 WORKDIR /home/anon
