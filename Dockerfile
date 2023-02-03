@@ -49,7 +49,6 @@ RUN makepkg --skippgpcheck -s
 USER root
 
 RUN pacman -U --noconfirm /home/anon/tor-browser/*.pkg.tar.zst && \
-    pacman -R --noconfirm gcc fakeroot sudo git && \
     pacman -Scc --noconfirm && \
     rm -rf /home/anon/* 
 
