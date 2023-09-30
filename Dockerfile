@@ -39,11 +39,11 @@ RUN mkdir /home/anon/Downloads && \
     chown -R anon:anon /home/anon/
 USER anon
 
-RUN git clone https://aur.archlinux.org/tor-browser.git /home/anon/tor-browser
+RUN git clone https://aur.archlinux.org/tor-browser-bin.git /home/anon/tor-browser
     #gpg --receive-keys D1483FA6C3C07136 && \
     #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
 WORKDIR /home/anon/tor-browser
-RUN sed -i -e "s/pkgver='12.5.1'/pkgver='12.5.2'/g" PKGBUILD
+RUN sed -i -e "s/pkgver='12.5.4'/pkgver='12.5.6'/g" PKGBUILD
 #RUN sed -i -e "s/tor-browser-linux64-12.0.1_fr.tar.xz/tor-browser-linux64-12.0.1_ALL.tar.xz/g" PKGBUILD
 RUN makepkg --skippgpcheck -s 
 USER root
