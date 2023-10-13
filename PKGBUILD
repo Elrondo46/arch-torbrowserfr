@@ -5,6 +5,7 @@
 # Contributor: Yardena Cohen <yardenack AT gmail DOT com>
 # Contributor: Max Roder <maxroder AT web DOT de>
 # Contributor: BrLi
+#
 
 #
 # Before running makepkg, you must do this (as normal user):
