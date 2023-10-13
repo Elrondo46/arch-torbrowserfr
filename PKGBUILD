@@ -41,6 +41,7 @@ validpgpkeys=('EF6E286DDA85EA2A4BA7DE684E2C6E8793298290')
 
 _tag_i686='linux-i686'
 _tag_x86_64='linux-x86_64'
+_pkgsuffx=''
 _urlbase="https://dist.torproject.org/torbrowser/${pkgver}"
 _archstr=$([[ "${CARCH}" == 'x86_64' ]] && echo -n "${_tag_x86_64}" || echo -n "${_tag_i686}")
 
@@ -90,6 +91,7 @@ package() {
 		s/@PACKAGE_VERSION@/$(_sed_escape "${pkgver}")/g
 		s/@PACKAGE_RELEASE@/$(_sed_escape "${pkgrel}")/g
 		s/@PACKAGE_ARCH@/$(_sed_escape "${_archstr}")/g
+		s/@PACKAGE_SUFFIX@/$(_sed_escape "${_pkgsuffx}")/g
 	"
 
 	install -dm755 "${pkgdir}/usr/bin"
