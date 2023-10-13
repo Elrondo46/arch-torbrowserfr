@@ -39,8 +39,8 @@ conflicts=("${_appname}")
 install="${_appname}.install"
 validpgpkeys=('EF6E286DDA85EA2A4BA7DE684E2C6E8793298290')
 
-_tag_i686='linux'
-_tag_x86_64='linux'
+_tag_i686='linux-i686'
+_tag_x86_64='linux-x86_64'
 _urlbase="https://dist.torproject.org/torbrowser/${pkgver}"
 _archstr=$([[ "${CARCH}" == 'x86_64' ]] && echo -n "${_tag_x86_64}" || echo -n "${_tag_i686}")
 
