@@ -51,7 +51,8 @@ USER root
 
 RUN pacman -U --noconfirm /home/anon/tor-browser/*.pkg.tar.zst && \
     pacman -Scc --noconfirm && \
-    rm -rf /home/anon/* 
+    rm -rf /home/anon/*
+RUN chown -R anon:anon /home/anon
 
 USER anon
 RUN mkdir /home/anon/Downloads
