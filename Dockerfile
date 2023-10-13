@@ -44,8 +44,8 @@ RUN git clone https://aur.archlinux.org/tor-browser-bin.git /home/anon/tor-brows
     #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
 WORKDIR /home/anon/tor-browser
 #RUN sed -i -e "s/pkgver='12.5.6'/pkgver='13.0'/g" PKGBUILD
-RUN rm PKGBUILD && \
-    wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/PKGBUILD"
+RUN rm PKGBUILD && rm tor-brower.in && \
+    wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/PKGBUILD" && wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/tor_browser.in"
 RUN makepkg --skippgpcheck -s 
 USER root
 
