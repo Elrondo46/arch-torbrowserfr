@@ -46,6 +46,7 @@ WORKDIR /home/anon/tor-browser
 #RUN sed -i -e "s/pkgver='12.5.6'/pkgver='13.0'/g" PKGBUILD
 RUN rm PKGBUILD && rm tor-browser.in && \
     wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/PKGBUILD" && wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/tor_browser.in"
+RUN chmod +x tor_browser.in
 RUN makepkg --skippgpcheck -s 
 USER root
 
