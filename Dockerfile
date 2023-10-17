@@ -43,10 +43,6 @@ RUN git clone https://aur.archlinux.org/tor-browser-bin.git /home/anon/tor-brows
     #gpg --receive-keys D1483FA6C3C07136 && \
     #sed -i 's~dist.torproject.org/torbrowser~archive.torproject.org/tor-package-archive/torbrowser~g' PKGBUILD && \
 WORKDIR /home/anon/tor-browser
-#RUN sed -i -e "s/pkgver='12.5.6'/pkgver='13.0'/g" PKGBUILD
-RUN rm PKGBUILD && \
-    wget "https://raw.githubusercontent.com/Elrondo46/arch-torbrowserfr/master/PKGBUILD"
-RUN sed -i -e "s/_\${_TB_SERIES_}//g" tor-browser.in && sed -i '31d' tor-browser.in
 RUN makepkg --skippgpcheck -s 
 USER root
 
