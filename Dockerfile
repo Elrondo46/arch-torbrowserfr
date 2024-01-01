@@ -3,6 +3,11 @@ FROM archlinux:base
 RUN sed -i 's/^CheckSpace/#CheckSpace/g' /etc/pacman.conf
 
 RUN pacman -Syyuu --noconfirm && \
+    pacman -S --noconfirm archlinux-keyring
+
+RUN pacman-key --init && pacman-key --populate archlinux 
+
+RUN pacman -Syyuu --noconfirm && \
     pacman -S --noconfirm \
     base-devel \
     wget \
@@ -22,7 +27,6 @@ RUN pacman -Syyuu --noconfirm && \
     libvpx \
     libxt \
     mime-types \
-    archlinux-keyring \
     nss \
     git \
     fakeroot \
