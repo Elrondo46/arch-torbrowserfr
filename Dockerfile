@@ -22,6 +22,7 @@ RUN pacman -Syyuu --noconfirm && \
     libvpx \
     libxt \
     mime-types \
+    archlinux-keyring \
     nss \
     git \
     fakeroot \
