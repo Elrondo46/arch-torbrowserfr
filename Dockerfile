@@ -47,7 +47,7 @@ USER anon
 RUN git clone https://aur.archlinux.org/tor-browser-bin.git /home/anon/tor-browser
 WORKDIR /home/anon/tor-browser
 #RUN sed -i -e "s/13.0.9/13.0.10/g" PKGBUILD
-RUN makepkg --skippgpcheck -s 
+RUN makepkg --skippgpcheck --skipinteg -s 
 USER root
 
 RUN pacman -U --noconfirm /home/anon/tor-browser/*.pkg.tar.zst && \
